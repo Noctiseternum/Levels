@@ -267,23 +267,23 @@ public class WeaponHelper
 		switch (rarity)
 		{
 			case COMMON:
-				range = 0.2;
+				range = 0.5;
 				armor = Math.random() * range + (baseArmor - 0.2);
 				break;
 			case UNCOMMON:
-				range = 0.3;
+				range = 0.6;
 				armor = Math.random() * range + (baseArmor - 0.1);
 				break;
 			case RARE:
-				range = 0.4;
+				range = 0.7;
 				armor = Math.random() * range + (baseArmor + 0.1);
 				break;
 			case LEGENDARY:
-				range = 0.5;
+				range = 0.8;
 				armor = Math.random() * range + (baseArmor + 0.2);
 				break;
 			case MYTHIC:
-				range = 0.6;
+				range = 0.9;
 				armor = Math.random() * range + (baseArmor + 0.3);
 				break;
 			default:

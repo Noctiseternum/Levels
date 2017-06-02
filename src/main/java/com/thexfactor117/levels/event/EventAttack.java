@@ -45,7 +45,7 @@ public class EventAttack
 			EntityLivingBase enemy = event.getEntityLiving();
 			ItemStack stack = player.inventory.getCurrentItem();
 			
-			if (stack.getItem() instanceof ItemSword || stack.getItem() instanceof ItemAxe)
+			if (stack != null && (stack.getItem() instanceof ItemSword || stack.getItem() instanceof ItemAxe))
 			{
 				NBTTagCompound nbt = NBTHelper.loadStackNBT(stack);
 				
@@ -71,7 +71,7 @@ public class EventAttack
 					NBTTagCompound nbt = NBTHelper.loadStackNBT(stack);
 					
 					if (nbt != null)
-					{
+					{	
 						addExperience(nbt, stack, enemy);
 						useRarity(nbt, stack, false);
 						useAttributes(nbt, event, stack, player, enemy);
